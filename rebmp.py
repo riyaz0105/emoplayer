@@ -80,7 +80,7 @@ class KivyCamera(Image):
             self.textout = "Face Not Found..."
 
         except FileNotFoundError:
-            self.textout = "Music File Does Not Exist..."
+            self.textout = "Music File Doesn't Exist..."
 
         return
         
