@@ -27,7 +27,7 @@ def play_time():
 	# convert to time format
 	converted_current_time = time.strftime('%M:%S', time.gmtime(current_time))
 
-	# Get Currently Playing Song
+	# Get Current Playing Song
 	#current_song = song_box.curselection()
 	#Grab song title from playlist
 	song = song_box.get(ACTIVE)
