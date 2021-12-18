@@ -5,7 +5,6 @@ from tensorflow.keras.layers import Dense, Dropout, Flatten
 from tensorflow.keras.layers import Conv2D
 from tensorflow.keras.layers import MaxPooling2D
 import os
-import vlc
 import time
 from pathlib import Path
 from random import randint
@@ -43,13 +42,14 @@ model.add(Dense(7, activation='softmax'))
 
 
 model.load_weights('model.h5')
+
 print('\n Welcome to Music Player based on Facial Emotion Recognition \n')
 print('\n Press \'q\' to exit the music player \n')
 # prevents openCL usage and unnecessary logging messages
 cv2.ocl.setUseOpenCL(False)
 
 # dictionary which assigns each label an emotion (alphabetical order)
-emotion_dict = {0: "Angry", 1: "Disgusted", 2: "Fearful", 3: "Happy", 4: "Neutral", 5: "Sad", 6: "Surprised"}
+emotion_dict = {0: "angry", 1: "disgust", 2: "fear", 3: "happy", 4: "neutral", 5: "sad", 6: "surprise"}
 
 #File to append the emotions
 with open(str(Path.cwd())+"\emotion.txt","w") as emotion_file:
@@ -57,7 +57,7 @@ with open(str(Path.cwd())+"\emotion.txt","w") as emotion_file:
         # start the webcam feed
     cap = cv2.VideoCapture(0)
     now = time.time()  ###For calculate seconds of video
-    future = now + 10
+    future = now + 4
     while True:
         # Find haar cascade to draw bounding box around face
         ret, frame = cap.read()
@@ -79,14 +79,14 @@ with open(str(Path.cwd())+"\emotion.txt","w") as emotion_file:
             emotion_file.flush()
 
         cv2.imshow('Video', cv2.resize(frame,(800,480),interpolation = cv2.INTER_CUBIC))
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break 
-
+        if cv2.waitKey(1) & 0XFF == ord('q'):
+            break
         
         if time.time() > future:  ##after 10 second music will play
             cv2.destroyAllWindows()
             music_player(text)
-            future = time.time() + 10
+            future = time.time() + 2
                 
     
     cap.release()
+    cv2.destroyAllWindows()
