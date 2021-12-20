@@ -34,6 +34,6 @@ Requirements
 
 Evaluation
 
-Accuracy of Training data- ~93% 
+Accuracy of Training data- ~93%   
 Accuracy of Validation data- ~63.2%
 
