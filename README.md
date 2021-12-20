@@ -5,11 +5,11 @@ System - A music player that uses camera to detect the user's emotion. The User 
 
 Each song can be added under one of these  seven categories. The emotions are:
 
-1.Happy 
-2.Sad 
-3.Anger 
+1.Happy   
+2.Sad   
+3.Anger   
 4.Surprise  
-5.Disgust 
+5.Disgust   
 6.Fear  
 7.Neutral 
 
@@ -23,11 +23,11 @@ Modules
 
 Requirements
 
-1.Python3 
+1.Python3   
 2.Tensorflow  
 3.OpenCV  
 4.Kivy  
-5.Tkinter 
+5.Tkinter   
 6.python-vlc  
 7.numpy 
 
