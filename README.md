@@ -31,7 +31,7 @@ Requirements
 6.numpy 
 
 
-Evaluation
+Evaluation Measures
 
 Accuracy of Training data- ~93%   
 Accuracy of Validation data- ~63.2%
