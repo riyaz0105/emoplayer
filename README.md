@@ -25,11 +25,10 @@ Requirements
 
 1.Python3   
 2.Tensorflow  
-3.OpenCV  
-4.Kivy  
-5.Tkinter   
-6.python-vlc  
-7.numpy 
+3.OpenCV    
+4.Tkinter   
+5.python-vlc  
+6.numpy 
 
 
 Evaluation
